@@ -1,0 +1,68 @@
+<div class="adopt-me-main-container">
+  <div class="adopt-me-sub-container">
+    <h3 class="adopt-me-heading">I'll be a good friend</h3>
+
+    <hr class="hr" />
+
+    <div class="adopt-me-info">
+      <img [src]="currentCard.image" class="adopt-me-image" />
+      <div class="adopt-me-sub-info">
+        <p class="common-info">
+          Pet Type - <b>{{ currentCard.petType }}</b>
+        </p>
+
+        <hr class="hr-info" />
+        <p class="common-info">
+          Gender - <b>{{ currentCard.gender }}</b>
+        </p>
+
+        <hr class="hr-info" />
+        <p class="common-info">
+          Put on adoption - <b>{{ currentCard.date }}</b>
+        </p>
+
+        <hr class="hr-info" />
+        <p class="common-info">
+          Spayed - <b>{{ currentCard.spayed }}</b>
+        </p>
+
+        <hr class="hr-info" />
+        <p class="common-info">
+          Tags to look -
+          <i
+            *ngFor="let a of currentCard.tags"
+            style="color: var(--complementaryColor)"
+          >
+            <span style="color: black"> [ </span>
+            {{ a }}
+            <span style="color: black"> ] </span></i
+          >
+        </p>
+
+        <hr class="hr-info" />
+        <p class="common-info">
+          Vaccinations -
+          <i
+            style="padding-left: 5px; color: var(--buttonGreen)"
+            *ngFor="let a of currentCard.vaccination"
+          >
+            <span style="color: black">[</span> {{ a }}
+            <span style="color: black">]</span></i
+          >
+        </p>
+
+        <button routerLink="/connect-owner" class="adopt-info-button">
+          ADOPT
+        </button>
+
+        <div hidden="true">
+          <app-connect-owner [currentPetInfo]="currentCard">
+          </app-connect-owner>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div *ngFor="let a of currentCard.vaccination; index as i"> -->
+  <!--   {{ a[i] }} -->
+  <!-- </div> -->
+</div>

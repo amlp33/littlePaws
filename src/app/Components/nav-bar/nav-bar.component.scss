@@ -1,0 +1,189 @@
+body {
+  // font-family: "Source Sans Pro", sans-serif;
+}
+
+.navbarContainer {
+  display: flex;
+  height: 10%;
+  width: 100%;
+  background: var(--defaultThemeColor);
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 60px 0 100px;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow: hidden;
+}
+.navbarLinkList {
+  position: absolute;
+  right: 180px;
+}
+
+.logo-name {
+  left: 10px;
+  color: rgb(0, 0, 0);
+}
+.navbarContainer .app-logo {
+  color: rgb(248, 248, 248);
+  font-size: 35px;
+  font-weight: 600;
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+  top: 35px;
+}
+.navbarContainer ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.navbarContainer ul li {
+  margin: 0 5px;
+}
+.navbarContainer ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+.navbarContainer ul li a.active,
+.navbarContainer ul li a:hover {
+  color: #585858;
+  // background: #fff;
+}
+.menu-btn i {
+  padding: 10px;
+  padding-right: 14px;
+}
+.navbarContainer .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+#hamburgerCheckbox {
+  display: none;
+}
+
+.ruler {
+  visibility: hidden;
+}
+
+.hamburger {
+  position: absolute;
+  right: 120px;
+  bottom: 20px;
+  font-family: "FontAwesome";
+  font-style: normal;
+}
+.account-icon {
+  height: 23px;
+  width: 23px;
+  // border: 1px solid gray;
+}
+
+.user-account-mobile {
+  position: absolute;
+  display: none;
+  bottom: 30px;
+  right: 180px;
+  width: 22px;
+  height: 22px;
+}
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .navbarContainer ul li .menu-btn i nav .app-logo {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbarContainer {
+    float: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .user-account-mobile {
+    display: flex;
+  }
+  .navbarContainer .menu-btn i {
+    display: block;
+  }
+
+  .navbarLinkList {
+    right: 0px;
+  }
+  #hamburgerCheckbox:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  .navbarContainer ul {
+    position: fixed;
+    padding-top: 50px;
+    top: 60px;
+    left: -100%;
+    background-color: var(--defaultThemeColor);
+    height: 100vh;
+    width: 100%;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  #hamburgerCheckbox:checked ~ ul {
+    left: 0;
+  }
+  .navbarContainer ul li {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .navbarContainer ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    // transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: white;
+  }
+  #hamburgerCheckbox:checked ~ ul li a {
+    margin-left: 10px;
+  }
+  .navbarContainer ul li a.active,
+  .navbarContainer ul li a:hover {
+    color: black;
+  }
+
+  .ruler {
+    margin-left: 2%;
+    width: 95%;
+    visibility: visible;
+    color: grey;
+  }
+  .account-icon {
+    visibility: hidden;
+  }
+}
+// .content {
+//   text-align: center;
+//   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+//   color: #1b1b1b;
+//   margin-top: 100px;
+// }
+// .content div {
+//   font-size: 25px;
+//   font-weight: 500;
+// }
+
+@media (max-width: 1000px) {
+  .navbarContainer {
+    padding: 0 40px 0 50px;
+  }
+  .navbarLinkList {
+    right: 80px;
+  }
+}

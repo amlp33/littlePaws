@@ -1,0 +1,50 @@
+<div class="login-main-container">
+  <h4 class="login-heading">
+    <a routerLink="/home"> little<span class="sub-heading">paws</span> </a>
+  </h4>
+
+  <hr class="hr" />
+  <form
+    class="login-form-container"
+    #loginForm="ngForm"
+    (ngSubmit)="submitData(loginForm.value)"
+  >
+    <h3 style="font-size: 25px">Sign-In</h3>
+    <input
+      name="email"
+      [(ngModel)]="loginDataStore.email"
+      class="login-input-common"
+      placeholder="Email or phone number"
+      ngModel
+      #email="ngModel"
+      type="email"
+      pattern="[a-z0-9]+@gmail.com"
+    />
+    <span *ngIf="email.invalid && email.touched" class="error">
+      invalid email
+    </span>
+    <input
+      class="login-input-common"
+      type="password"
+      placeholder="Password"
+      [(ngModel)]="loginDataStore.password"
+      name="password"
+      ngModel
+    />
+
+    <button
+      [routerLink]="isUserExists ? ['/choose-type'] : []"
+      class="login-submit"
+      type="submit"
+    >
+      SIGN IN
+    </button>
+    <span
+      >dont have a account ?
+      <a routerLink="/sign-up" style="text-decoration: underline; color: purple"
+        >sign up</a
+      ></span
+    >
+  </form>
+  <p class="message">{{ message }}</p>
+</div>

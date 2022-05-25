@@ -1,0 +1,21 @@
+.connect-owner-main-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  display: grid;
+  place-items: center;
+}
+
+.connect-owner-sub {
+  position: absolute;
+  top: 200px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 10px;
+  display: grid;
+}
+
+.hr {
+  width: 100%;
+}

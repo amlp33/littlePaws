@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbarContainer">
+      <a routerLink="/home"
+        ><div class="app-logo">
+          little<span class="logo-name">Paws</span>
+        </div></a
+      >
+      <input
+        (change)="changeVisible()"
+        type="checkbox"
+        [checked]="menuVisible"
+        id="hamburgerCheckbox"
+      />
+      <label for="hamburgerCheckbox" class="menu-btn">
+        <i class="fa-solid fa-bars hamburger"></i>
+      </label>
+
+      <a routerLink="choose-adoption" [hidden]="myAccountMobile">
+        <img
+          src="../../../assets/user-icon-circle.png"
+          class="user-account-mobile"
+          mat-button
+          [matMenuTriggerFor]="menu"
+        />
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>My profile</button>
+          <button mat-menu-item>settings</button>
+          <button mat-menu-item>help</button>
+        </mat-menu>
+      </a>
+      <ul class="navbarLinkList" (click)="toggleVisibility()">
+        <hr class="ruler" style="width: 99%; margin: 0" />
+        <li>
+          <a routerLink="home">Home</a>
+        </li>
+        <hr class="ruler" />
+        <li><a routerLink="about-us">About us</a></li>
+        <hr class="ruler" />
+        <li><a routerLink="contact-us">Contact us</a></li>
+        <hr class="ruler" />
+        <li><a routerLink="faq">FAQ</a></li>
+        <hr class="ruler" />
+        <li>
+          <a routerLink="sign-up" [hidden]="!myAccountVisibility"
+            >Login/Sign-up
+          </a>
+        </li>
+        <li [hidden]="myAccountVisibility" class="user-account-class">
+          <!-- <a routerLink="choose-adoption"> -->
+          <img
+            src="../../../assets/user-icon-circle.png"
+            class="account-icon"
+            mat-button
+            [matMenuTriggerFor]="menu"
+          />
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>My profile</button>
+            <button mat-menu-item>settings</button>
+            <button mat-menu-item>help</button>
+          </mat-menu>
+          <!-- </a> -->
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

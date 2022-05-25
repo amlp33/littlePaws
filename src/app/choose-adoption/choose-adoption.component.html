@@ -1,0 +1,24 @@
+<div class="choose-adoption-main-container">
+  <img class="adoption-image" src="../../assets/21.png" />
+  <span class="adoption-heading">What you want to adopt ?</span>
+  <hr class="hr" />
+  <div class="choose-adoption-sub-container">
+    <div
+      (click)="currentAnimalFunc('cat')"
+      routerLink="/display-card"
+      class="cat common-adoption"
+    >
+      Cat
+    </div>
+    <div
+      (click)="currentAnimalFunc('dog')"
+      routerLink="/display-card"
+      class="dog common-adoption"
+    >
+      Dog
+    </div>
+    <div (click)="currentAnimalFunc('others')" class="other common-adoption">
+      Others
+    </div>
+  </div>
+</div>
