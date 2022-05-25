@@ -1,0 +1,13 @@
+<div class="display-main">
+  <!-- <input type="text" placeholder="search tags.." class="tag-search" /> -->
+  <h1 class="message">Please adopt irrespective of breed...</h1>
+  <hr class="hr" />
+  <div class="display-card-main-container">
+    <div
+      *ngFor="let info of petInfoSpecific"
+      class="display-card-sub-container"
+    >
+      <app-card [petInfoChild]="[info]"></app-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+.find-home-main-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin-top: 20%;
+}
+
+.find-home-sub {
+  position: relative;
+  bottom: 200px;
+  width: 50%;
+  height: fit-content;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 10px;
+  padding-top: 20px;
+  display: grid;
+  overflow: hidden;
+}
+
+.hr {
+  border: none;
+  border-bottom: 2px solid var(--complementaryColor);
+}
+
+.find-home-input-common {
+  padding: 10px;
+  padding-bottom: 8px;
+  padding-left: 2px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-top: 0;
+  grid-area: "input";
+}
+
+.find-home-submit {
+  padding: 7px;
+  border: none;
+  color: white;
+  background-color: var(--complementaryColor);
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.find-submit:hover {
+  background-color: var(--buttonHover);
+}
+
+input:focus {
+  outline: none !important;
+  border-bottom: 2px solid var(--complementaryColor);
+}
+
+.radioButton {
+  grid-area: "radio";
+}
+.input_1 {
+  grid-area: "input_1";
+}
+.input_2 {
+  grid-area: "input_2";
+}
+.find-home-info {
+  padding: 20px;
+  display: grid;
+  grid-template-areas: "input_1 input_1 input_2 input_2" "radio radio radio radio";
+  column-gap: 20px;
+}

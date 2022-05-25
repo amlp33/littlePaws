@@ -1,0 +1,32 @@
+<div class="card-sub-container">
+  <div class="display-image-container" *ngFor="let img of petInfoChild">
+    <img src="{{ img.image }}" class="card-image" />
+    <hr class="hr" />
+
+    <p class="adoption-date">Put for adoption on {{ img.date }}</p>
+    <div class="display-card-info" *ngFor="let info of petInfoChild">
+      <span>{{ info.petType }}</span>
+      <span> {{ info.gender }}</span>
+
+      <span>spayed {{ info.spayed }}</span>
+      <span>vaccinated {{ info.vaccinated }}</span>
+    </div>
+    <div class="button-container">
+      <button
+        (click)="currentSelectedAnimal(img.id)"
+        routerLink="/adopt-me"
+        class="adopt-button"
+      >
+        ADOPT
+      </button>
+      <button
+        (click)="currentSelectedAnimal(img.id)"
+        routerLink="/adopt-me"
+        class="know-more adopt-button"
+      >
+        KNOW MORE
+      </button>
+      <app-adopt-me></app-adopt-me>
+    </div>
+  </div>
+</div>

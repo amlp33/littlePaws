@@ -1,0 +1,78 @@
+.login-main-container {
+  position: relative;
+  display: grid;
+  width: 100%;
+  place-items: center;
+  height: 100vh;
+  background-color: white;
+}
+.login-form-container {
+  position: absolute;
+  top: 150px;
+  display: grid;
+  padding: 20px;
+  width: 30%;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  row-gap: 20px;
+  overflow: hidden;
+}
+
+.login-heading {
+  position: absolute;
+  top: 80px;
+  font-size: 40px;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+}
+.sub-heading {
+  color: var(--defaultThemeColor);
+}
+
+.login-input-common {
+  padding: 30px;
+  padding-bottom: 8px;
+  padding-left: 2px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-top: 0;
+}
+
+.login-submit {
+  padding: 7px;
+  border: none;
+  color: white;
+  background-color: var(--complementaryColor);
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.login-submit:hover {
+  background-color: var(--buttonHover);
+}
+
+input:focus {
+  outline: none !important;
+  border-bottom: 2px solid var(--complementaryColor);
+}
+
+.error {
+  color: red;
+}
+
+input.ng-invalid {
+  border-bottom: 2px solid red;
+}
+
+@media (max-width: 900px) {
+  .login-form-container {
+    width: 80%;
+  }
+}

@@ -1,0 +1,49 @@
+.choose-adoption-type-main-container {
+  position: relative;
+  min-height: 1000px;
+  bottom: 60px;
+  width: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+}
+
+.choose-adoption-sub {
+  display: grid;
+  width: 50%;
+  row-gap: 20px;
+}
+.common {
+  height: 150px;
+  width: 150px;
+  border-radius: 4px;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  color: white;
+  background-color: var(--buttonGreen);
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.find-pet {
+  background-color: var(--complementaryColor);
+}
+.common:hover {
+  transition-duration: 0.3s;
+  background-color: var(--buttonGreenHover);
+  cursor: pointer;
+}
+
+.find-pet:hover {
+  transition-duration: 0.3s;
+  background-color: var(--buttonHover);
+  cursor: pointer;
+}
+.adoption-type-image {
+  position: absolute;
+  top: 100px;
+  left: 20%;
+}

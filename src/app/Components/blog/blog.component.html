@@ -1,0 +1,35 @@
+<img class="faq-image" src="assets/23.png" />
+
+<section class="faq-section">
+  <div class="faqs-container">
+    <!-- ***** FAQ Start ***** -->
+
+    <div class="col-md-6">
+      <div class="faq-title">
+        <h2>FAQ</h2>
+      </div>
+    </div>
+
+    <!-- display all question using for loop
+add toggle value for each question false.
+id,q,a,toggle=f. 
+pass the id to toggle function
+
+-->
+
+    <div *ngFor="let qes of FAQ; index as i" class="faq">
+      <span class="badge">Q</span>
+      <p class="faq-question">{{ qes.question }}</p>
+      <button (click)="toggle(i)" class="btns">
+        <div class="icon">{{ qes.buttonName }}</div>
+        <br />
+      </button>
+      <p>
+        <br />
+        <ng-container *ngIf="qes.toggle"
+          ><p lass="faq-answer">{{ qes.answer }}</p></ng-container
+        >
+      </p>
+    </div>
+  </div>
+</section>

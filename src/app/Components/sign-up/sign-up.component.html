@@ -1,0 +1,77 @@
+<div class="sign-up-main-container">
+  <h4 class="sign-up-heading">
+    <a routerLink="/home"> little<span class="sub-heading">paws</span> </a>
+  </h4>
+
+  <hr class="hr" />
+
+  <form
+    #signupForm="ngForm"
+    (ngSubmit)="submitData(signupForm.value)"
+    class="sign-up-container"
+  >
+    <h3 style="font-size: 25px">Create Account</h3>
+    <input
+      name="fullname"
+      autofocus
+      class="contact-us-input-common"
+      type="text"
+      placeholder="Full name"
+      [(ngModel)]="userdata.fullName"
+      ngModel
+    />
+    <input
+      class="contact-us-input-common"
+      placeholder=" Email"
+      name="email"
+      [(ngModel)]="userdata.email"
+      ngModel
+      #email="ngModel"
+      type="email"
+      pattern="[a-z0-9]+@gmail.com"
+    />
+    <span *ngIf="email.invalid" class="error"> invalid email</span>
+    <input
+      class="contact-us-input-common"
+      type="number"
+      placeholder="Phone no"
+      name="phoneNumber"
+      [(ngModel)]="userdata.phoneNumber"
+      #phoneNumber="ngModel"
+      pattern="[1-9]{1}[0-9]{9}"
+    />
+    <span class="error" *ngIf="phoneNumber.invalid && phoneNumber.touched"
+      >invalid phone number</span
+    >
+
+    <input
+      class="contact-us-input-common"
+      type="password"
+      placeholder="Password"
+      name="password"
+      [(ngModel)]="userdata.password"
+    />
+    <input
+      class="contact-us-input-common"
+      type="password"
+      placeholder="Confirm password"
+      name="confirmPassword"
+      [(ngModel)]="userdata.confirmPassword"
+    />
+
+    <button
+      class="contact-us-submit"
+      (click)="changeAccountVisibility()"
+      type="submit"
+      routerLink="/login"
+    >
+      SIGN UP
+    </button>
+    <span
+      >already have a account ?
+      <a routerLink="/login" style="text-decoration: underline; color: purple"
+        >sign in</a
+      ></span
+    >
+  </form>
+</div>
