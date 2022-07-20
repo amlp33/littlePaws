@@ -30,8 +30,8 @@ export class SignUpComponent implements OnInit {
   }
 
   userdata = new Form(
-    'Avinash Janbhare',
-    'avinashjanbhare@gmail.com',
+    'Arvind Choudhary',
+    'arvindchoudhary@gmail.com',
     9998887775,
     'baburaoapte33',
     'baburaoapte33'

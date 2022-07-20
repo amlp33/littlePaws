@@ -1,7 +1,14 @@
 <div class="connect-owner-main-container">
   <div class="connect-owner-sub">
-    <h3>Connect to owner</h3>
+    <h3 class="heading">
+      Connect to <b style="color: black;"> {{ currentOwner.ownerName }}</b> care taker for the
+      {{ currentOwner.petType }}
+    </h3>
     <hr class="hr" />
-    {{currentPetInfo | json}}
+    <div class="info">
+      <span>Whatsapp No. {{ currentOwner.phoneNumber }} </span>
+      <hr class="hr" />
+      <span>Email : {{ currentOwner.email }}</span>
+    </div>
   </div>
 </div>

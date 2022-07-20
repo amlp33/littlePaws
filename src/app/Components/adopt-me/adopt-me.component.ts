@@ -14,6 +14,10 @@ export class AdoptMeComponent implements OnInit {
     this.currentCardFunc();
   }
 
+  currentIdFunc(currentId: number) {
+    console.log('current', currentId);
+    global.currentSelectedAnimalId = currentId;
+  }
   currentCard: any;
   currentCardFunc() {
     for (let i = 0; i <= global.petInfoGlobal.length - 1; i++) {

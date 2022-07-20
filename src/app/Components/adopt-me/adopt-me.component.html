@@ -51,14 +51,18 @@
           >
         </p>
 
-        <button routerLink="/connect-owner" class="adopt-info-button">
+        <button
+          routerLink="/connect-owner"
+          class="adopt-info-button"
+          (click)="currentIdFunc(currentCard.id)"
+        >
           ADOPT
         </button>
 
-        <div hidden="true">
-          <app-connect-owner [currentPetInfo]="currentCard">
-          </app-connect-owner>
-        </div>
+        <!-- <div hidden="true"> -->
+        <!--   <app-connect-owner [currentPetInfo]="currentCard.id"> -->
+        <!--   </app-connect-owner> -->
+        <!-- </div> -->
       </div>
     </div>
   </div>

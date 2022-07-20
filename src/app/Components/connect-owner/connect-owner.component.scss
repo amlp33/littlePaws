@@ -16,6 +16,21 @@
   display: grid;
 }
 
+.heading {
+  background: var(--complementaryColor);
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+}
+
+.info {
+  padding-top: 5px;
+  display: grid;
+  row-gap: 10px;
+}
 .hr {
   width: 100%;
+  border: none;
+  border-bottom: 1px solid lightgray;
 }
